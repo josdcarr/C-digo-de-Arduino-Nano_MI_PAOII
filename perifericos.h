@@ -22,9 +22,9 @@ delay(500);
 lcd.clear();
 }
 void pitido() {
-  tone(Buzzer, 1000); // Send 1KHz sound signal...
-  delay(1000);        // ...for 1 sec
-  noTone(Buzzer);     // Stop sound...
+  tone(Buzzer, 1000); // Pitido de 1Kh
+  delay(1000);        
+  noTone(Buzzer);     // Detener sonido
 }
 
 void ledRGB(float ph) {//255 significa brillo minimo, 0 es brillo al maximo. Se uso un led rgb tipo anodo
