@@ -7,13 +7,13 @@
 #include "orp_grav.h"
 // Establecer constantes 
 //---------------------------------PH-----------------------------------------
-#define PHSensorPin A0
+#define PHSensorPin A1
 
 //---------------------------------ORP-----------------------------------------
 
 Gravity_ORP ORP = Gravity_ORP(A2);
 //---------------------------------TDS-----------------------------------------
-#define TdsSensorPin A1
+#define TdsSensorPin A0
 //---------------------------------Nivel agua-----------------------------------------
 #define NASensorPin 2
 //-------------------------------Temperatura----------------------------------------
@@ -21,8 +21,8 @@ OneWire ourWire(3);                //Se establece el pin 3  como bus OneWire
 DallasTemperature sensors(&ourWire); //Se declara una variable u objeto para nuestro sensor
 //-------------------------------Perifericos----------------------------------------
 //RGB
-#define pinR 6
-#define pinG 5
+#define pinR 5
+#define pinG 4
 
 //I2C
 LiquidCrystal_I2C lcd(0x27,16,2);  
