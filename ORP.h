@@ -1,11 +1,11 @@
 
-#define VOLTAGE 5.00    //system voltage
+#define VOLTAGE 5.00    //Voltaje del sistema
 #define OFFSET 0        //zero drift voltage
 
 
 double orpValue;
 
-#define ArrayLenth  40    //times of collection
+#define ArrayLenth  40    //Recoleccion de datos para promediar
 
 int orpArray[ArrayLenth];
 int orpArrayIndex=0;
@@ -20,7 +20,7 @@ double avergearray(int* arr, int number){
     printf("Error number for the array to avraging!/n");
     return 0;
   }
-  if(number<5){   //less than 5, calculated directly statistics
+  if(number<5){   //Promedio en caso de tener menos de 5 datos
     for(i=0;i<number;i++){
       amount+=arr[i];
     }
@@ -53,7 +53,7 @@ double avergearray(int* arr, int number){
 
 float NivelORP(){
 
-  orpArray[orpArrayIndex++]=analogRead(A2);    //read an analog value every 20ms
+  orpArray[orpArrayIndex++]=analogRead(A2);    //Lectura señal analogica
   if (orpArrayIndex==ArrayLenth) {
       orpArrayIndex=0;
     }
