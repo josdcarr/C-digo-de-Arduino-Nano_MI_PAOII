@@ -4,7 +4,7 @@ int phval = 0;
 unsigned long int avgval; 
 int buffer_arr[10],temp;
 float NivelpH(){
-
+//Recoleccion y promedio de 30 datos
  for(int i=0;i<10;i++) 
  { 
  buffer_arr[i]=analogRead(PHSensorPin);
