@@ -80,11 +80,11 @@ if(digitalRead(LCD)==1){
   lcd.clear();  
   lcd.setCursor(0, 0);   
   lcd.print("Bomba desconectada");
+  delay(500);
+  lcd.clear();  
+  lcdDatos(temperatura,ph,orp,tds);
   sonido=0;
-
 }
-
-
 JsonDocumentType jsonMediciones = JsonMedidas(temperatura, tds, agua,ph,orp);
 String jsonString;
 serializeJson(jsonMediciones, jsonString);
