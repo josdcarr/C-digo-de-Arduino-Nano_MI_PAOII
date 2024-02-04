@@ -1,10 +1,7 @@
-
-
-
 bool nivelAgua()
 {
-// read the level value of pin 7 and assign if to val
-if(digitalRead(NASensorPin)==LOW)// check if the button is pressed, if yes, turn on the LED
+// Detecta si hay liquidos en el pin de entrada
+if(digitalRead(NASensorPin)==LOW)
 { return false;}
 else
 { return true;}
